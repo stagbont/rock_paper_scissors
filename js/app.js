@@ -35,3 +35,25 @@ function playRound(playSelection, computerSelection) {
         score;
     }
 }
+
+function game() {
+    for(let i = 0; i < 5; i++) {
+        playSelection = prompt("Enter Your Play: ");
+        playRound(playSelection, computerSelection);
+    }
+
+    if(score < 0) {
+        return console.log("You Lose! The Game");
+    }
+
+    else if (score == 0) {
+        return console.log("It is a Tie");
+    }
+
+    else if (score > 0) {
+        return console.log("You Won! The Game");
+    }
+}
+
+game();
+
